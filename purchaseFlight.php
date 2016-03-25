@@ -42,19 +42,15 @@ session_start();
 
 <div class="container hero-unit">
 <?php
-
-    $id = $_POST['id'];
-    $flight = $_POST['flight'];
-    $airline = $_POST['airline'];
-    $price = $_POST['cost'];
+    $price = $_POST['price'];
     $tax = 514.76;
     $total = $price + $tax;
 
 ?>
 <h2>Your flight from <?php echo $_SESSION["fromPort"]; ?> to <?php echo $_SESSION["toPort"]; ?> has been reserved.</h2>
-    <p>Airline: <?php echo $id ?></p>
-    <p>Flight Number: <?php echo $flight ?></p>
-    <p>Price: <?php echo $price ?></p>
+    <p>Airline: <?php echo $_POST['airline'];  ?></p>
+    <p>Flight Number: <?php echo $_POST['flight']; ?></p>
+    <p>Price: <?php echo $_POST['price'] ?></p>
     <p>Arbitrary Fees and Taxes: <?php echo $tax; ?></p>
     <hr></hr>
     <p>Total Cost: <em><?php echo $total; ?> </em></p>

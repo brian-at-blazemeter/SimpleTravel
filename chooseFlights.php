@@ -67,11 +67,10 @@ session_start();
                 <td>1:43 AM</td>
                 <td>9:45 PM</td>
                 <td>$472.56</td>
-                   <input type="hidden" value="43" name="flight">
+                <input type="hidden" value="43" name="flight">
                 <input type="hidden" value="472.56" name="price">
                 <input type="hidden" value="Virgin America" name="airline">
-              
-                   <script>mixpanel.track("Virgin Flight 43 Selected");</script>
+
                 </form>
             </tr>
             <tr>
@@ -85,8 +84,7 @@ session_start();
                     <input type="hidden" value="234" name="flight">
                 <input type="hidden" value="432.98" name="price">
                 <input type="hidden" value="United Airlines" name="airline">
-                   
-                    <script>mixpanel.track("United Flight 234 Selected");</script>
+
                 </form>
             </tr>
             <tr>
@@ -100,8 +98,7 @@ session_start();
                 <input type="hidden" value="9696" name="flight">
                 <input type="hidden" value="200.98" name="price">
                 <input type="hidden" value="Aer Lingus" name="airline">
-                    
-                    <script>mixpanel.track("Aer Lingus Flight 9696 Selected");</script>
+
                 </form>
 
             </tr>
@@ -116,8 +113,6 @@ session_start();
                     <input type="hidden" value="12" name="flight">
                 <input type="hidden" value="765.32" name="price">
                 <input type="hidden" value="Virgin America" name="airline">
-                    
-                    <script>mixpanel.track("Virgin Flight 12 Selected");</script>
                 </form>
             </tr>
             <tr>
@@ -132,7 +127,6 @@ session_start();
                 <input type="hidden" value="233.98" name="price">
                 <input type="hidden" value="Lufthansa" name="airline">
                 
-                <script>mixpanel.track("Lufthansa Flight 4346 Selected");</script>
                 </form>
             </tr>
             </tbody>
