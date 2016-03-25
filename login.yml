@@ -1,0 +1,16 @@
+---
+execution:
+  scenario: simple
+  concurrency: 5
+  hold-for: 20s
+
+scenarios:
+  simple:
+    requests:
+      - url: 'http://localhost/flights/login.php'
+        method: GET
+      - url: 'http://localhost/flights/index.php'
+        method: POST
+        body:
+          password: taurus
+          username: taurus
