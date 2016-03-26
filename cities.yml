@@ -14,3 +14,4 @@ scenarios:
 modules:
   blazemeter:
     token: WCFtlUQJGlP9HDDEaqHS
+    test: CodeDeploy Performance Test
