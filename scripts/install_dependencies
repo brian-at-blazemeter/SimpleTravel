@@ -1,2 +1,7 @@
 #!/bin/bash
-pip install --upgrade bzt
+
+if which bzt >/dev/null; then
+    pip install --upgrade bzt
+else
+    pip install bzt
+fi
