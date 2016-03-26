@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bzt /var/www/html/cities.yml -o modules.console.disable=true
