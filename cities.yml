@@ -1,0 +1,12 @@
+---
+execution:
+  scenario: simple
+  concurrency: 5
+  hold-for: 20s
+
+scenarios:
+  simple:
+   requests:
+      - url: http://localhost/SimpleTravel/index.php
+        method: GET
+        label: Home Page
