@@ -1,8 +1,12 @@
+<?php
+// Start the session
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Enterprise Selenium Flights App</title>
+    <title>Simple Travel Agency</title>
     <meta name="description" content="Enterprise Selenium demo app">
     <meta name="sage" content="flights app">
 

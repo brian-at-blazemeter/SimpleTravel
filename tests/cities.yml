@@ -11,7 +11,10 @@ scenarios:
         method: GET
         label: Home Page
 
+reporting:
+  - module: blazemeter
+
 modules:
   blazemeter:
-    token: WCFtlUQJGlP9HDDEaqHS
-    test: CodeDeploy Performance Test
+    browser-open: none
+    test: Simple Travel Build Test

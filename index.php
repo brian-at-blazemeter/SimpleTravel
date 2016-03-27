@@ -7,7 +7,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Enterprise Selenium Flights App</title>
+    <title>Simple Travel Agency</title>
     <meta name="description" content="Enterprise Selenium demo app">
     <meta name="sage" content="flights app">
 
@@ -42,7 +42,7 @@ session_start();
 </div>
 <div class="jumbotron">
     <div class="container">
-        <h1>Welcome to the Taurus Travel Agency!</h1>
+        <h1>Welcome to the Simple Travel Agency!</h1>
         <p>Do you love to travel? Get ready for some action! Choose your departure and destination below and pack your bags...</p>
     <div>
         <img src="assets/plane.png" class="img-rounded">
