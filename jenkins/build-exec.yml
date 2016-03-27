@@ -1,0 +1,5 @@
+---
+execution:
+  scenario: simple
+  concurrency: 200
+  hold-for: 3m
