@@ -1,15 +1,13 @@
 ---
 execution:
   scenario: simple
-  concurrency: 5
-  hold-for: 20s
+  concurrency: 20
+  hold-for: 1m
 
 scenarios:
   simple:
     requests:
-      - url: 'http://localhost/flights/login.php'
-        method: GET
-      - url: 'http://localhost/flights/index.php'
+      - url: 'http://localhost/SimpleTravel/login.php'
         method: POST
         body:
           password: taurus
