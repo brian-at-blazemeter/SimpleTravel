@@ -2,4 +2,6 @@
 services:
   - module: passfail
     criterias:
-    - p90>2000ms for 10s, stop as failed
+    - p90>2s, stop as failed
+    - avg-rt of Home Page>1s for 10s, stop as failed
+    - fail>2% for 10s, stop as failed

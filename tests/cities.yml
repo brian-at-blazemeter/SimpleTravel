@@ -9,8 +9,10 @@ scenarios:
     requests:
       - url: 'http://localhost/SimpleTravel/index.php'
         method: GET
+        label: Home Page
       - url: 'http://localhost/SimpleTravel/chooseFlights.php'
         method: POST
+        label: Choose Flights
         body:
           fromPort: Paris
           toPort: Rome
