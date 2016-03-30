@@ -1,27 +1,16 @@
 ---
 execution:
   scenario: simple
-  concurrency: 20
-  hold-for: 1m
+  concurrency: 50
+  hold-for: 3m
 
-scenarios:
 scenarios:
   simple:
     requests:
-      - url: http://blazedemo.com/index.php
+      - url: 'http://localhost/SimpleTravel/index.php'
         method: GET
-        label: Home Page
-      - url: http://blazedemo.com/reserve.php
+      - url: 'http://localhost/SimpleTravel/chooseFlights.php'
         method: POST
-        label: Choose Cities
         body:
-          toPort: London
-          fromPort: Boston
-
-reporting:
-  - module: blazemeter
-
-modules:
-  blazemeter:
-    browser-open: none
-    test: Simple Travel Build Test
+          fromPort: Paris
+          toPort: Rome

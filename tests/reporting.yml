@@ -1,0 +1,8 @@
+---
+reporting:
+  - module: blazemeter
+
+modules:
+  blazemeter:
+    browser-open: none
+    test: Simple Travel Build Test
