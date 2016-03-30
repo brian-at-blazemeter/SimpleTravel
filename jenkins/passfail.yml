@@ -1,0 +1,5 @@
+---
+services:
+  - module: passfail
+    criterias:
+    - p90>2000ms for 10s, stop as failed
