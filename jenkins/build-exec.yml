@@ -3,4 +3,4 @@ execution:
   scenario: simple
   concurrency: 100
   ramp-up: 30s
-  hold-for: 3m
+  hold-for: 5m
