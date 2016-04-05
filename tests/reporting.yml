@@ -1,6 +1,7 @@
 ---
 reporting:
   - module: blazemeter
+    dump-csv: login-test.csv
 
 modules:
   blazemeter:
