@@ -2,7 +2,7 @@
 execution:
   scenario: simple
   concurrency: 20
-  hold-for: 1m
+  hold-for: 2m
 
 scenarios:
   simple:

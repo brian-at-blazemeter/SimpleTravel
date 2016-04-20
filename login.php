@@ -57,7 +57,7 @@ session_start();
     <!-- login form -->
 
     <form name="login" action="index.php" method="post">
-        <input class="input-large" type="text" name="username" placeholder="username"><p>
+            <input class="input-large" type="text" name="username" placeholder="username"><p>
             <input class="input-large" type="password" name="password" placeholder="password"><p>
             <input type="submit" class="btn btn-primary" value="Login">
     </form>
