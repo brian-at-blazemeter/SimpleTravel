@@ -24,7 +24,31 @@ session_start();
 </head>
 
 <body>
+<?php
+$conn = mysqli_connect("localhost", "root", "root", "simple_travel");
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
+
+$name = $_POST['name'];
+$address = $_POST['address'];
+$city = $_POST['city'];
+$state = $_POST['state'];
+$zip = $_POST['zip'];
+$sql="INSERT INTO customer (name, address, city, state, zip)
+VALUES
+('$name','$address', '$city', '$state', '$zip')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>
 <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
         <div class="container">

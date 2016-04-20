@@ -52,7 +52,7 @@ session_start();
     <p>Flight Number: <?php echo $_POST['flight']; ?></p>
     <p>Price: <?php echo $_POST['price'] ?></p>
     <p>Arbitrary Fees and Taxes: <?php echo $tax; ?></p>
-    <hr></hr>
+    <hr>
     <p>Total Cost: <em><?php echo $total; ?> </em></p>
     <p>Please submit the form below to purchase the flight.</p>
 
@@ -62,31 +62,31 @@ session_start();
     <div class="control-group">
         <label class="control-label" for="inputName">Name</label>
         <div class="controls">
-            <input type="text" id="inputName" placeholder="First Last">
+            <input type="text" id="inputName" placeholder="First Last" name="name">
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="address">Address</label>
         <div class="controls">
-            <input type="text" id="address" placeholder="123 Main St.">
+            <input type="text" id="address" placeholder="123 Main St." name="address">
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="city">City</label>
         <div class="controls">
-            <input type="text" id="city" placeholder="Anytown">
+            <input type="text" id="city" placeholder="Anytown" name="city">
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="state">State</label>
         <div class="controls">
-            <input type="text" id="state" placeholder="State">
+            <input type="text" id="state" placeholder="State" name="state">
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="zipCode">Zip Code</label>
         <div class="controls">
-            <input type="text" id="zipCode" placeholder="12345">
+            <input type="text" id="zipCode" placeholder="12345" name="zip">
         </div>
     </div>
 
@@ -122,7 +122,7 @@ session_start();
                 <input type="checkbox"> Remember me
             </label>
             <button type="submit" class="btn btn-primary">Purchase Flight</button>
-            <script>mixpanel.track("Flight Purchase Complete");</script>
+            
         </div>
     </div>
 </form>
