@@ -1,0 +1,15 @@
+---
+execution:
+- executor: selenium
+  iterations: 10
+  scenario:
+    script: BlazeDemo.java
+  locations:
+    us-west-1: 1
+
+provisioning: cloud
+modules:
+  cloud:
+    address: https://a.blazemeter.com
+    token: WCFtlUQJGlP9HDDEaqHS
+    test: selenium
