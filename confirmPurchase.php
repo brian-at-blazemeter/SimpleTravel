@@ -1,6 +1,12 @@
 <?php
 // Start the session
 session_start();
+if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
+    header('HTTP/1.1 500 Internal Server Error');
+    echo "CSRF ATTACK!";
+    throw new RuntimeException('CSRF attack');
+    session_destroy();
+}
 ?>
 <!doctype html>
 <html lang="en">

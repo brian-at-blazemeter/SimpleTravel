@@ -1,6 +1,12 @@
 <?php
 // Start the session
 session_start();
+if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
+    header('HTTP/1.1 500 Internal Server Error');
+    echo "CSRF ATTACK!";
+    throw new RuntimeException('CSRF attack');
+    session_destroy();
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -44,6 +50,7 @@ session_start();
     // Set session variables
     $_SESSION["fromPort"] = $_POST['fromPort'];
     $_SESSION["toPort"] = $_POST['toPort'];
+
     ?>
 
         <h3>Flights from <?php echo $_SESSION["fromPort"]; ?> to <?php echo $_SESSION["toPort"]; ?>: </h3>
@@ -133,6 +140,7 @@ session_start();
         </table>
         <input type="hidden" name="fromPort" value="<?php echo $fromPort; ?>" />
         <input type="hidden" name="toPort" value="<?php echo $toPort; ?>" />
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
 
 
 

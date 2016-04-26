@@ -1,6 +1,8 @@
 <?php
 // Start the session
 session_start();
+$token = sha1(microtime());
+$_SESSION['token'] = $token;
 ?>
 
 <!doctype html>
@@ -76,7 +78,9 @@ session_start();
             <option value="Cairo">Cairo</option>
         </select>
         </p>
-        <input type="submit" class="btn btn-primary" value="Find Flights"><script>mixpanel.track("Cities Selected");</script></input>
+        <input type="hidden" name="csrf_token" value="<?php echo $token; ?>"></input>
+
+        <input type="submit" class="btn btn-primary" value="Find Flights"></input>
     </form>
 </div>
 
