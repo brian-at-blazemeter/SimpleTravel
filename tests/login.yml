@@ -1,5 +1,6 @@
 ---
 execution:
+  executor: gatling
   scenario: simple
   concurrency: 20
   hold-for: 2m

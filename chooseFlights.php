@@ -5,7 +5,7 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
     header('HTTP/1.1 500 Internal Server Error');
     echo "CSRF ATTACK!";
     throw new RuntimeException('CSRF attack');
-    session_destroy();
+    session_abort();
 }
 ?>
 <!doctype html>
@@ -77,6 +77,7 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
                 <input type="hidden" value="43" name="flight">
                 <input type="hidden" value="472.56" name="price">
                 <input type="hidden" value="Virgin America" name="airline">
+                   <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
 
                 </form>
             </tr>
@@ -91,6 +92,7 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
                     <input type="hidden" value="234" name="flight">
                 <input type="hidden" value="432.98" name="price">
                 <input type="hidden" value="United Airlines" name="airline">
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
 
                 </form>
             </tr>
@@ -105,6 +107,8 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
                 <input type="hidden" value="9696" name="flight">
                 <input type="hidden" value="200.98" name="price">
                 <input type="hidden" value="Aer Lingus" name="airline">
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
+
 
                 </form>
 
@@ -120,6 +124,8 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
                     <input type="hidden" value="12" name="flight">
                 <input type="hidden" value="765.32" name="price">
                 <input type="hidden" value="Virgin America" name="airline">
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
+
                 </form>
             </tr>
             <tr>
@@ -133,14 +139,16 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
                 <input type="hidden" value="4346" name="flight">
                 <input type="hidden" value="233.98" name="price">
                 <input type="hidden" value="Lufthansa" name="airline">
-                
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
+
+
                 </form>
             </tr>
             </tbody>
         </table>
         <input type="hidden" name="fromPort" value="<?php echo $fromPort; ?>" />
         <input type="hidden" name="toPort" value="<?php echo $toPort; ?>" />
-        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
+
 
 
 
