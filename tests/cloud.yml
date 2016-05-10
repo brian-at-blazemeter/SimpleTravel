@@ -1,9 +1,9 @@
 ---
 execution:
   scenario: simple
-  concurrency: 100
-  ramp-up: 30s
-  hold-for: 5m
+  concurrency: 200
+  ramp-up: 5m
+  hold-for: 10m
   locations:
     us-west-2: 1
     us-west-1: 2

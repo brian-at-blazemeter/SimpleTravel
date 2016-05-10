@@ -60,6 +60,7 @@ session_start();
             <input class="input-large" type="text" name="username" placeholder="username"><p>
             <input class="input-large" type="password" name="password" placeholder="password"><p>
             <input type="submit" class="btn btn-primary" value="Login">
+        <input 
     </form>
 
 

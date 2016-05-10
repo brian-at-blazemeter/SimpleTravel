@@ -3,6 +3,7 @@ execution:
   scenario: simple
   concurrency: 50
   hold-for: 3m
+  ramp-up: 1m
 
 scenarios:
   simple:
