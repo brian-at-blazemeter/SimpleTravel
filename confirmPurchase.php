@@ -54,6 +54,8 @@ VALUES
 // }
 
 // mysqli_close($conn);
+sleep .5;
+
 ?>
 <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
