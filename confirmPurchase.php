@@ -74,7 +74,7 @@ sleep(.5);
 
 
 <div class="container hero-unit">
-    <h3>Your flight from <?php echo $_SESSION["fromPort"]; ?> to <?php echo $_SESSION["toPort"]; ?> has been reserved. Thank you!</h3>
+    <h3>Your fnord flight from <?php echo $_SESSION["fromPort"]; ?> to <?php echo $_SESSION["toPort"]; ?> has been reserved. Thank you!</h3>
 </div>
 
 <?php
