@@ -1,9 +1,10 @@
 ---
+reporting:
+
 execution:
 - concurrency: 4
-  hold-for: 600s
-  iterations: 30
-  ramp-up: 60s
+  hold-for: 60s
+  ramp-up: 10s
   scenario: Thread Group
 scenarios:
   Thread Group:
@@ -16,11 +17,7 @@ scenarios:
     - extract-regexp:
         token: <input type="hidden" name="csrf_token" value="(.+)" />
       headers:
-        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-        Accept-Encoding: gzip,deflate,sdch
-        Accept-Language: en-US,en;q=0.8
         Upgrade-Insecure-Requests: '1'
-        User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/50.0.2661.94Safari/537.36
       label: http://uut/SimpleTravel/
       method: GET
       url: http://uut/SimpleTravel/
@@ -28,15 +25,6 @@ scenarios:
         csrf_token: ${token}
         fromPort: ${from}
         toPort: ${to}
-      headers:
-        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-        Accept-Encoding: gzip,deflate
-        Accept-Language: en-US,en;q=0.8
-        Content-Type: application/x-www-form-urlencoded
-        Origin: http://uut
-        Referer: http://uut/SimpleTravel/
-        Upgrade-Insecure-Requests: '1'
-        User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/50.0.2661.94Safari/537.36
       label: http://uut/SimpleTravel/chooseFlights.php
       method: POST
       url: http://uut/SimpleTravel/chooseFlights.php
@@ -45,15 +33,6 @@ scenarios:
         csrf_token: ${token}
         flight: '43'
         price: '472.56'
-      headers:
-        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-        Accept-Encoding: gzip,deflate
-        Accept-Language: en-US,en;q=0.8
-        Content-Type: application/x-www-form-urlencoded
-        Origin: http://uut
-        Referer: http://uut/SimpleTravel/chooseFlights.php
-        Upgrade-Insecure-Requests: '1'
-        User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/50.0.2661.94Safari/537.36
       label: http://uut/SimpleTravel/purchaseFlight.php
       method: POST
       url: http://uut/SimpleTravel/purchaseFlight.php
@@ -64,15 +43,6 @@ scenarios:
         name: Joe
         state: NY
         zip: '12345'
-      headers:
-        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-        Accept-Encoding: gzip,deflate
-        Accept-Language: en-US,en;q=0.8
-        Content-Type: application/x-www-form-urlencoded
-        Origin: http://uut
-        Referer: http://uut/SimpleTravel/purchaseFlight.php
-        Upgrade-Insecure-Requests: '1'
-        User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/50.0.2661.94Safari/537.36
       label: http://uut/SimpleTravel/confirmPurchase.php
       method: POST
       url: http://uut/SimpleTravel/confirmPurchase.php
