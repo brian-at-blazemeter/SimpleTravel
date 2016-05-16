@@ -1,7 +1,7 @@
 <?php
 // Start the session
 session_start();
-if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_t']) {
+if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
     header('HTTP/1.1 500 Internal Server Error');
     echo "CSRF ATTACK!";
     throw new RuntimeException('CSRF attack');
@@ -127,7 +127,7 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_t']) {
             <label class="checkbox">
                 <input type="checkbox"> Remember me
             </label>
-            <input type="hidden" name="csrf_t" value="<?php echo $_SESSION['token']; ?>" />
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
             <button type="submit" class="btn btn-primary">Purchase Flight</button>
             
         </div>
