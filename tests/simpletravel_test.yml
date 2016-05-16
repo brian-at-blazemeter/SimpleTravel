@@ -1,0 +1,48 @@
+---
+execution:
+- concurrency: 4
+  hold-for: 60s
+  ramp-up: 10s
+  scenario: Thread Group
+scenarios:
+  Thread Group:
+    data-sources:
+    - delimiter: ','
+      path: simpletravel_test.csv
+      quoted: false
+      recycle: false
+    requests:
+    - extract-regexp:
+        token: <input type="hidden" name="csrf_token" value="(.+)" />
+      label: http://uut/SimpleTravel/
+      method: GET
+      url: http://uut/SimpleTravel/
+    - body:
+        csrf_token: ${token}
+        fromPort: ${from}
+        toPort: ${to}
+      label: http://uut/SimpleTravel/chooseFlights.php
+      method: POST
+      url: http://uut/SimpleTravel/chooseFlights.php
+    - body:
+        airline: VirginAmerica
+        csrf_token: ${token}
+        flight: '43'
+        price: '472.56'
+      label: http://uut/SimpleTravel/purchaseFlight.php
+      method: POST
+      url: http://uut/SimpleTravel/purchaseFlight.php
+    - body:
+        address: 123Main
+        city: Anytown
+        csrf_token: ${token}
+        name: Joe
+        state: NY
+        zip: '12345'
+      label: http://uut/SimpleTravel/confirmPurchase.php
+      method: POST
+      url: http://uut/SimpleTravel/confirmPurchase.php
+    store-cache: true
+    store-cookie: true
+    use-dns-cache-mgr: false
+

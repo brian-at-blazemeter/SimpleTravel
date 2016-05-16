@@ -31,11 +31,11 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
 
 <body>
 <?php
-$conn = mysqli_connect("localhost", "root", "root", "simple_travel");
+// $conn = mysqli_connect("localhost", "root", "root", "simple_travel");
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
 
 
 $name = $_POST['name'];
@@ -47,13 +47,15 @@ $sql="INSERT INTO customer (name, address, city, state, zip)
 VALUES
 ('$name','$address', '$city', '$state', '$zip')";
 
-if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+// if (mysqli_query($conn, $sql)) {
+//     echo "New record created successfully";
+// } else {
+//     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+// }
 
-mysqli_close($conn);
+// mysqli_close($conn);
+sleep(.5);
+
 ?>
 <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
