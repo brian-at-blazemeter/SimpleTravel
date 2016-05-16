@@ -1,6 +1,4 @@
 ---
-reporting:
-
 execution:
 - concurrency: 4
   hold-for: 60s
@@ -16,8 +14,6 @@ scenarios:
     requests:
     - extract-regexp:
         token: <input type="hidden" name="csrf_token" value="(.+)" />
-      headers:
-        Upgrade-Insecure-Requests: '1'
       label: http://uut/SimpleTravel/
       method: GET
       url: http://uut/SimpleTravel/
