@@ -78,7 +78,7 @@ $_SESSION['token'] = $token;
             <option value="Cairo">Cairo</option>
         </select>
         </p>
-        <input type="hidden" name="csrf_t" value="<?php echo $_SESSION['token']; ?>" />
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['token']; ?>" />
 
         <input type="submit" class="btn btn-primary" value="Find Flights"></input>
     </form>
