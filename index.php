@@ -44,7 +44,7 @@ $_SESSION['token'] = $token;
 </div>
 <div class="jumbotron">
     <div class="container">
-        <h1>Welcome to the Simple Travel Agency!</h1>
+        <h1>Hello!  Welcome to the Simple Travel Agency!</h1>
         <p>Do you love to travel? Get ready for some action! Choose your departure and destination below and pack your bags...</p>
     <div>
         <img src="assets/plane.png" class="img-rounded">
