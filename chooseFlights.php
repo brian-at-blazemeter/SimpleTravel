@@ -31,6 +31,8 @@ if (!isset($_SESSION['token']) || $_SESSION['token'] !== $_POST['csrf_token']) {
 
 <body>
 
+Trivial change
+
 <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
         <div class="container">
